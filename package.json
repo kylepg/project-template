@@ -19,7 +19,8 @@
     "eslintIgnore": [
         "index.js",
         "dist/**/*.js",
-        "dist/*.js"
+        "dist/*.js",
+        "node_modules/"
     ],
     "eslint.options": {
         "extends": [
