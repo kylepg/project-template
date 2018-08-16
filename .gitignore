@@ -1,0 +1,15 @@
+node_modules/
+.sass-cache/
+.cache
+*.css.map
+assets/
+reference/
+design/
+dist/*
+dist/**/*
+.vscode
+Icon
+package-lock.json
+
+
+
