@@ -5,16 +5,15 @@
     "author": "Kyle George",
     "license": "MIT",
     "scripts": {
-        "parcel": "parcel ./src/index.html --out-dir dist/dev/",
-        "watch": "parcel watch ./src/index.html",
-        "build": "parcel build  ./src/index.html --no-source-maps",
         "sync": "browser-sync start --proxy 'localhost:1234' -w",
-        "stage": "rm dist/*.js && rm dist/*.css && npm run build && duck --username nbcelticsa --password ***** --upload ftp://nbcelticsa@cdnftp.turner.com/js/project-name-stage.js /Users/kyle/Dropbox/CELTICS/projects/project-name/dist/*.js --existing overwrite -y && duck --username nbcelticsa --password ***** --upload ftp://nbcelticsa@cdnftp.turner.com/css/project-name-stage.css /Users/kyle/Dropbox/CELTICS/projects/project-name/dist/*.css --existing overwrite -y",
-        "stage-js": "rm dist/*.js && npm run build && duck --username nbcelticsa --password ***** --upload ftp://nbcelticsa@cdnftp.turner.com/js/project-name-stage.js /Users/kyle/Dropbox/CELTICS/projects/project-name/dist/*.js --existing overwrite -y",
-        "stage-css": "rm dist/*.css && npm run build && duck --username nbcelticsa --password ***** --upload ftp://nbcelticsa@cdnftp.turner.com/css/project-name.min.css /Users/kyle/Dropbox/CELTICS/projects/project-name/dist/*.css --existing overwrite -y",
-        "publish": "rm dist/*.js && rm dist/*.css && npm run build && duck --username nbcelticsa --password ***** --upload ftp://nbcelticsa@cdnftp.turner.com/js/project-name-stage.js /Users/kyle/Dropbox/CELTICS/projects/project-name/dist/*.js --existing overwrite -y && duck --username nbcelticsa --password ***** --upload ftp://nbcelticsa@cdnftp.turner.com/css/project-name.min.css /Users/kyle/Dropbox/CELTICS/projects/project-name/dist/*.css --existing overwrite -y",
-        "publish-js": "rm dist/*.js npm run build && duck --username nbcelticsa --password ***** --upload ftp://nbcelticsa@cdnftp.turner.com/js/project-name.min.js /Users/kyle/Dropbox/CELTICS/projects/project-name/dist/*.js --existing overwrite -y",
-        "publish-css": "rm dist/*.css npm run build && duck --username nbcelticsa --password ***** --upload ftp://nbcelticsa@cdnftp.turner.com/css/project-name.min.css /Users/kyle/Dropbox/CELTICS/projects/project-name/dist/*.css --existing overwrite -y"
+        "dev": "parcel ./src/index.html --out-dir dist/dev/",
+        "build": "parcel build  ./src/index.html --no-source-maps",
+        "stage": "npm run stage-js && npm run stage-css",
+        "stage-js": "rm -f dist/*.js && npm run build && duck --username nbcelticsa --password ***** --upload ftp://nbcelticsa@cdnftp.turner.com/js/project-stage.js /Users/kyle/Dropbox/CELTICS/projects/project/dist/*.js --existing overwrite -y",
+        "stage-css": "rm dist/*.css && npm run build && duck --username nbcelticsa --password ***** --upload ftp://nbcelticsa@cdnftp.turner.com/css/project-stage.css /Users/kyle/Dropbox/CELTICS/projects/project/dist/*.css --existing overwrite -y",
+        "publish": "npm run publish-js && npm run publish-css",
+        "publish-js": "rm dist/*.js && npm run build && duck --username nbcelticsa --password ***** --upload ftp://nbcelticsa@cdnftp.turner.com/js/project.min.js /Users/kyle/Dropbox/CELTICS/projects/project/dist/*.js --existing overwrite -y",
+        "publish-css": "rm dist/*.css && npm run build && duck --username nbcelticsa --password ***** --upload ftp://nbcelticsa@cdnftp.turner.com/css/project.min.css /Users/kyle/Dropbox/CELTICS/projects/project/dist/*.css --existing overwrite -y"
     },
     "eslintIgnore": [
         "index.js",
