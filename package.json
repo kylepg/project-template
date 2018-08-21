@@ -21,7 +21,7 @@
         "dist/*.js",
         "node_modules/"
     ],
-    "eslint.options": {
+    "eslintConfig": {
         "extends": [
             "airbnb",
             "prettier"
