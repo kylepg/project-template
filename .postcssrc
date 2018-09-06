@@ -1,5 +1,5 @@
 {
-  "map" : { inline: true},
+  "map" : { inline: false},
   "plugins": {
     "autoprefixer": {
       "grid": true
