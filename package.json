@@ -1,102 +1,95 @@
 {
-    "name": "project-name",
-    "version": "1.0.0",
-    "description": "celtics.com/project-name",
-    "author": "Kyle George",
-    "license": "MIT",
-    "scripts": {
-        "sync": "browser-sync start --proxy 'localhost:1234' -w",
-        "dev": "parcel ./src/index.html --out-dir dist/dev/",
-        "build": "parcel build  ./src/index.html --no-source-maps",
-        "stage": "npm run stage-js && npm run stage-css",
-        "stage-js": "rm -f dist/*.js && npm run build && duck --username nbcelticsa --password ***** --upload ftp://nbcelticsa@cdnftp.turner.com/js/project-name-stage.js /Users/kyle/Dropbox/CELTICS/projects/project-name/dist/*.js --existing overwrite -y",
-        "stage-css": "rm dist/*.css && npm run build && duck --username nbcelticsa --password ***** --upload ftp://nbcelticsa@cdnftp.turner.com/css/project-name-stage.css /Users/kyle/Dropbox/CELTICS/projects/project-name/dist/*.css --existing overwrite -y",
-        "publish": "npm run publish-js && npm run publish-css",
-        "publish-js": "rm dist/*.js && npm run build && duck --username nbcelticsa --password ***** --upload ftp://nbcelticsa@cdnftp.turner.com/js/project-name.min.js /Users/kyle/Dropbox/CELTICS/projects/project-name/dist/*.js --existing overwrite -y",
-        "publish-css": "rm dist/*.css && npm run build && duck --username nbcelticsa --password ***** --upload ftp://nbcelticsa@cdnftp.turner.com/css/project-name.min.css /Users/kyle/Dropbox/CELTICS/projects/project-name/dist/*.css --existing overwrite -y"
-    },
-    "eslintIgnore": [
-        "index.js",
-        "dist/**/*.js",
-        "dist/*.js",
-        "node_modules/"
-    ],
-    "eslintConfig": {
-        "extends": [
-            "airbnb",
-            "prettier"
-        ],
-        "rules": {
-            "no-console": 0,
-            "func-names": 0,
-            "wrap-iife": 0,
-            "spaced-comment": 0,
-            "space-before-function-paren": "off",
-            "no-var": "off",
-            "no-plusplus": "off",
-            "prefer-destructuring": "off",
-            "no-global-assign": "off",
-            "import/extensions": 0,
-            "global-require": "off",
-            "ignoreStrings": true,
-            "prettier/prettier": [
-                "error",
-                {
-                    "trailingComma": "es5",
-                    "singleQuote": true,
-                    "printWidth": 200
-                }
-            ]
-        },
-        "env": {
-            "browser": true,
-            "node": true,
-            "jquery": true
-        },
-        "parser": "babel-eslint",
-        "plugins": [
-            "prettier"
-        ]
-    },
-    "babel": {
-        "sourceMap": "inline",
-        "presets": [
-            [
-                "env",
-                {
-                    "targets": {
-                        "node": "current"
-                    }
-                }
-            ]
-        ],
-        "plugins": [
-            "transform-runtime"
-        ],
-        "minified": true
-    },
-    "devDependencies": {
-        "babel-core": "^6.26.0",
-        "babel-eslint": "^8.2.6",
-        "babel-plugin-transform-async-to-generator": "^6.24.1",
-        "babel-plugin-transform-runtime": "^6.23.0",
-        "babel-preset-env": "^1.6.1",
-        "babelify": "^8.0.0",
-        "cssnano": "^4.0.5",
-        "eslint": "^4.15.0",
-        "eslint-config-airbnb": "^16.1.0",
-        "eslint-config-prettier": "^2.9.0",
-        "eslint-plugin-import": "^2.13.0",
-        "eslint-plugin-jsx-a11y": "^6.1.1",
-        "eslint-plugin-prettier": "^2.6.2",
-        "eslint-plugin-react": "^7.10.0",
-        "node-sass": "^4.9.2",
-        "prettier-eslint": "^8.8.2",
-        "uglifyify": "^4.0.5",
-        "autoprefixer": "^9.0.2"
-    },
-    "dependencies": {
-        "babel-polyfill": "^6.26.0",
-        "babel-runtime": "^6.26.0"
-    }
+	"name": "project-name",
+	"version": "1.0.0",
+	"description": "celtics.com/project-name",
+	"author": "Kyle George",
+	"license": "MIT",
+	"scripts": {
+		"sync": "browser-sync start --proxy 'localhost:1234' -w",
+		"dev": "parcel ./src/index.html --out-dir dist/dev/",
+		"build": "parcel build  ./src/index.html --no-source-maps",
+		"stage": "npm run stage-js && npm run stage-css",
+		"stage-js":
+			"rm -f dist/*.js && npm run build && duck --username nbcelticsa --password ***** --upload ftp://nbcelticsa@cdnftp.turner.com/js/project-name-stage.js /Users/kyle/Dropbox-Celtics/CELTICS/projects/project-name/dist/*.js --existing overwrite -y",
+		"stage-css":
+			"rm dist/*.css && npm run build && duck --username nbcelticsa --password ***** --upload ftp://nbcelticsa@cdnftp.turner.com/css/project-name-stage.css /Users/kyle/Dropbox-Celtics/CELTICS/projects/project-name/dist/*.css --existing overwrite -y",
+		"publish": "npm run publish-js && npm run publish-css",
+		"publish-js":
+			"rm dist/*.js && npm run build && duck --username nbcelticsa --password ***** --upload ftp://nbcelticsa@cdnftp.turner.com/js/project-name.min.js /Users/kyle/Dropbox-Celtics/CELTICS/projects/project-name/dist/*.js --existing overwrite -y",
+		"publish-css":
+			"rm dist/*.css && npm run build && duck --username nbcelticsa --password ***** --upload ftp://nbcelticsa@cdnftp.turner.com/css/project-name.min.css /Users/kyle/Dropbox-Celtics/CELTICS/projects/project-name/dist/*.css --existing overwrite -y"
+	},
+	"eslintIgnore": ["index.js", "dist/**/*.js", "dist/*.js", "node_modules/"],
+	"eslintConfig": {
+		"extends": ["airbnb", "prettier"],
+		"rules": {
+			"no-console": 0,
+			"quotes": ["error", "backtick"],
+			"func-names": 0,
+			"wrap-iife": 0,
+			"spaced-comment": 0,
+			"space-before-function-paren": "off",
+			"no-var": "off",
+			"no-plusplus": "off",
+			"prefer-destructuring": "off",
+			"no-global-assign": "off",
+			"import/extensions": 0,
+			"global-require": "off",
+			"ignoreStrings": true,
+			"prettier/prettier": [
+				"error",
+				{
+					"trailingComma": "es5",
+					"singleQuote": true,
+					"printWidth": 200
+				}
+			]
+		},
+		"env": {
+			"browser": true,
+			"node": true,
+			"jquery": true
+		},
+		"parser": "babel-eslint",
+		"plugins": ["prettier"]
+	},
+	"babel": {
+		"sourceMap": "inline",
+		"presets": [
+			[
+				"env",
+				{
+					"targets": {
+						"node": "current"
+					}
+				}
+			]
+		],
+		"plugins": ["transform-runtime"],
+		"minified": true
+	},
+	"devDependencies": {
+		"babel-core": "^6.26.0",
+		"babel-eslint": "^8.2.6",
+		"babel-plugin-transform-async-to-generator": "^6.24.1",
+		"babel-plugin-transform-runtime": "^6.23.0",
+		"babel-preset-env": "^1.6.1",
+		"babelify": "^8.0.0",
+		"cssnano": "^4.0.5",
+		"eslint": "^4.15.0",
+		"eslint-config-airbnb": "^16.1.0",
+		"eslint-config-prettier": "^2.9.0",
+		"eslint-plugin-import": "^2.13.0",
+		"eslint-plugin-jsx-a11y": "^6.1.1",
+		"eslint-plugin-prettier": "^2.6.2",
+		"eslint-plugin-react": "^7.10.0",
+		"node-sass": "^4.9.2",
+		"prettier-eslint": "^8.8.2",
+		"uglifyify": "^4.0.5",
+		"autoprefixer": "^9.0.2"
+	},
+	"dependencies": {
+		"babel-polyfill": "^6.26.0",
+		"babel-runtime": "^6.26.0"
+	}
 }
