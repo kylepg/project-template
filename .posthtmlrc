@@ -1,0 +1,16 @@
+{
+	"plugins": {
+		"posthtml-modules": {
+			"root": "./",
+			"plugins": [],
+			"from": "./src/index.html",
+			"initial": false
+		},
+		"posthtml-alt-always": {},
+		"posthtml-minifier": {
+			"collapseWhitespace": true,
+			"minifyCSS": true,
+			"removeComments": true
+		}
+	}
+}

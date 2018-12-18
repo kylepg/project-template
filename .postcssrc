@@ -1,8 +1,8 @@
 {
-  "map" : { inline: false},
-  "plugins": {
-    "autoprefixer": {
-      "grid": true
-    }
-  }
+	"map": { "inline": false },
+	"plugins": {
+		"autoprefixer": {
+			"grid": true
+		}
+	}
 }
