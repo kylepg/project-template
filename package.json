@@ -71,6 +71,7 @@
 		"minified": true
 	},
 	"devDependencies": {
+		"autoprefixer": "^9.0.2",
 		"babel-core": "^6.26.0",
 		"babel-eslint": "^8.2.6",
 		"babel-plugin-transform-async-to-generator": "^6.24.1",
@@ -89,11 +90,11 @@
 		"posthtml": "^0.11.3",
 		"posthtml-alt-always": "^1.0.1",
 		"posthtml-custom-elements": "^1.1.2",
+		"posthtml-modules": "^0.8.1",
 		"posthtml-tidy": "^0.8.0",
 		"posthtml-w3c": "^0.8.1",
 		"prettier-eslint": "^8.8.2",
-		"uglifyify": "^4.0.5",
-		"autoprefixer": "^9.0.2"
+		"uglifyify": "^4.0.5"
 	},
 	"dependencies": {
 		"babel-polyfill": "^6.26.0",
