@@ -10,14 +10,14 @@
 		"build": "parcel build  ./src/index.html --no-source-maps",
 		"stage": "npm run stage-js && npm run stage-css",
 		"stage-js":
-			"rm -f dist/*.js && npm run build && duck --username nbcelticsa --password ***** --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name/project-name-stage.js /Users/kyle/Dropbox-Celtics/CELTICS/projects/project-name/dist/*.js --existing overwrite -y",
+			"rm -f dist/*.js && npm run build && duck --username nbcelticsa --password ***** --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name/project-name-stage.js [path]/project-name/dist/*.js --existing overwrite -y",
 		"stage-css":
-			"rm dist/*.css && npm run build && duck --username nbcelticsa --password ***** --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name/project-name-stage.css /Users/kyle/Dropbox-Celtics/CELTICS/projects/project-name/dist/*.css --existing overwrite -y",
+			"rm dist/*.css && npm run build && duck --username nbcelticsa --password ***** --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name/project-name-stage.css [path]/project-name/dist/*.css --existing overwrite -y",
 		"publish": "npm run publish-js && npm run publish-css",
 		"publish-js":
-			"rm dist/*.js && npm run build && duck --username nbcelticsa --password ***** --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name/project-name.min.js /Users/kyle/Dropbox-Celtics/CELTICS/projects/project-name/dist/*.js --existing overwrite -y",
+			"rm dist/*.js && npm run build && duck --username nbcelticsa --password ***** --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name/project-name.min.js [path]/project-name/dist/*.js --existing overwrite -y",
 		"publish-css":
-			"rm dist/*.css && npm run build && duck --username nbcelticsa --password ***** --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name/project-name.min.css /Users/kyle/Dropbox-Celtics/CELTICS/projects/project-name/dist/*.css --existing overwrite -y"
+			"rm dist/*.css && npm run build && duck --username nbcelticsa --password ***** --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name/project-name.min.css [path]/project-name/dist/*.css --existing overwrite -y"
 	},
 	"eslintIgnore": ["index.js", "dist/**/*.js", "dist/*.js", "node_modules/"],
 	"eslintConfig": {
