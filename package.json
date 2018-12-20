@@ -21,7 +21,7 @@
 		"publish-css":
 			"rm dist/*.css && npm run build && duck --username nbcelticsa --password project-pw --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name/project-name.min.css project-path/project-name/dist/*.css --existing overwrite -y",
 		"ftp-init":
-			"mkdir project-name && duck --username nbcelticsa --password Xc!EL3!8 --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name ~/Dropbox-Celtics/CELTICS/projects/community/project-name/project-name/ -y && rm -rf ~/Dropbox-Celtics/CELTICS/projects/community/project-name/project-name"
+			"mkdir project-name && duck --username nbcelticsa --password Xc!EL3!8 --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name project-path/project-name/ -y && rm -rf project-path/project-name/project-name"
 	},
 	"eslintIgnore": ["index.js", "dist/**/*.js", "dist/*.js", "node_modules/"],
 	"eslintConfig": {
