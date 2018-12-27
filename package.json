@@ -21,9 +21,9 @@
 		"publish-css":
 			"rm dist/*.css && npm run build && duck --username nbcelticsa --password project-pw --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name/project-name.min.css project-path/project-name/dist/*.css --existing overwrite -y && TS=`date +%Y%m%d-%H:%M:%S`; cp project-path/project-name/dist/*.css ./log/publish_$TS.css",
 		"init":
-			"mkdir project-name && duck --username nbcelticsa --password project-pw --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name project-path/project-name/project-name -y && rm -rf project-path/project-name/project-name && npm run build",
+			"mkdir project-name && duck --username nbcelticsa --password project-pw --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name project-path/project-name/project-name -y && rm -rf project-path/project-name/project-name && npm run build && git checkout -b dev",
 		"master-push":
-			"git add -A && TS=`date +%Y%m%d-%H:%M:%S`; git commit -m 'publish$TS' && git checkout master && git merge dev && git push && git checkout dev"
+			"TS=`date +%Y-%m-%d__%H:%M:%S`; git add -A && git commit -m 'Publish commit: '$TS && git checkout master && git merge dev && git push && git checkout dev"
 	},
 	"eslintIgnore": ["index.js", "dist/**/*.js", "dist/*.js", "node_modules/"],
 	"eslintConfig": {
