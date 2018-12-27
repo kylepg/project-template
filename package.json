@@ -23,7 +23,7 @@
 		"init":
 			"mkdir project-name && duck --username nbcelticsa --password project-pw --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name project-path/project-name/project-name -y && rm -rf project-path/project-name/project-name && npm run build && git checkout -b dev",
 		"master-push":
-			"TS=`date +%Y-%m-%d__%H:%M:%S`; git add -A && git commit -m 'Publish commit: '$TS && git checkout master && git merge dev && git push && git checkout dev"
+			"TS=`date +%Y-%m-%d__%H:%M:%S`; git add -A && git commit -m 'Publish commit: '$TS && git push && git checkout master && git merge dev && git push && git checkout dev"
 	},
 	"eslintIgnore": ["index.js", "dist/**/*.js", "dist/*.js", "node_modules/"],
 	"eslintConfig": {
