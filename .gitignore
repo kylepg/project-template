@@ -5,8 +5,7 @@ node_modules/
 assets/
 reference/
 design/
-dist/*
-dist/**/*
+dist/dev/*
 .vscode
 Icon
 package-lock.json
