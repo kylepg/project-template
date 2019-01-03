@@ -12,9 +12,9 @@
 		"publish":
 			"npm run publish-js && npm run publish-css && npm run master-commit",
 		"stage-js":
-			"rm -f dist/*.js && npm run build && duck --username nbcelticsa --password project-pw --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name/project-name-stage.js project-path/project-name/dist/$(find . -maxdepth 2 -name '*main*.js' -type f -exec basename {} \\; -quit;) --existing overwrite -y",
+			"rm -f dist/*.js && npm run build && duck --username nbcelticsa --password project-pw --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name/project-name-stage.min.js project-path/project-name/dist/$(find . -maxdepth 2 -name '*main*.js' -type f -exec basename {} \\; -quit;) --existing overwrite -y",
 		"stage-css":
-			"rm dist/*.css && npm run build && duck --username nbcelticsa --password project-pw --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name/project-name-stage.css project-path/project-name/dist/$(find . -maxdepth 2 -name '*main*.css' -type f -exec basename {} \\; -quit;) --existing overwrite -y",
+			"rm dist/*.css && npm run build && duck --username nbcelticsa --password project-pw --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name/project-name-stage.min.css project-path/project-name/dist/$(find . -maxdepth 2 -name '*main*.css' -type f -exec basename {} \\; -quit;) --existing overwrite -y",
 		"publish-js":
 			"rm dist/*.js && npm run build && duck --username nbcelticsa --password project-pw --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name/project-name.min.js project-path/project-name/dist/$(find . -maxdepth 2 -name '*main*.js' -type f -exec basename {} \\; -quit;) --existing overwrite -y",
 		"publish-css":
