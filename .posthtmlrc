@@ -1,6 +1,5 @@
 {
 	"plugins": {
-		"posthtml-custom-elements": {},
 		"posthtml-modules": {
 			"root": "./",
 			"plugins": [],
