@@ -6,7 +6,8 @@
 	"license": "MIT",
 	"scripts": {
 		"sync": "browser-sync start --proxy 'localhost:1234' -w",
-		"watch": "parcel ./src/index.html --out-dir dist/dev/ & npm run watch-html",
+		"watch":
+			"parcel ./src/index.html --out-dir dist/dev/ & onchange 'src/html/*' 'src/html' -- touch ./src/index.html",
 		"build": "parcel build  ./src/index.html --no-source-maps",
 		"stage": "npm run stage-js && npm run stage-css",
 		"publish":
@@ -21,8 +22,6 @@
 			"rm dist/*.css && npm run build && duck --username nbcelticsa --password project-pw --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name/project-name.min.css project-path/project-name/dist/$(find . -maxdepth 2 -name '*main*.css' -type f -exec basename {} \\; -quit;) --existing overwrite -y",
 		"init":
 			"mkdir project-name && duck --username nbcelticsa --password project-pw --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name project-path/project-name/project-name -y && rm -rf project-path/project-name/project-name && npm run build && git checkout -b dev",
-		"watch-html":
-			"nodemon --watch ./src/html/*.html -x \"touch ./src/index.html\"",
 		"master-commit":
 			"TS=`date +%Y-%m-%d__%H:%M:%S`; git add -A && git commit -m 'Publish commit: '$TS && git checkout master && git merge dev && git checkout dev",
 		"push": "git push && git checkout master && git push && git checkout dev"
@@ -94,6 +93,7 @@
 		"eslint-plugin-react": "^7.10.0",
 		"node-sass": "^4.9.2",
 		"nodemon": "^1.18.9",
+		"onchange": "^5.2.0",
 		"posthtml": "^0.11.3",
 		"posthtml-alt-always": "^1.0.1",
 		"posthtml-custom-elements": "^1.1.2",
