@@ -16,6 +16,7 @@
 		"publish-css": "rm dist/*.css && npm run build && s3cmd put ./dist/$(find . -maxdepth 2 -name '*main*.css' -type f -exec basename {} \\; -quit;) s3://celticsdigital/projects/project-name/project-name.min.css --no-mime-magic --acl-public",
 		"init": "npm run build && git checkout -b dev",
 		"master-commit": "TS=`date +%Y-%m-%d__%H:%M:%S`; git add -A && git commit -m 'Publish commit: '$TS && git checkout master && git merge dev && git checkout dev",
+		"assets": "s3cmd put ./assets/exported/* s3://celticsdigital/projects/project-name/assets --no-mime-magic --acl-public",
 		"push": "git push && git checkout master && git push && git checkout dev"
 	},
 	"eslintIgnore": ["index.js", "dist/**/*.js", "dist/*.js", "node_modules/"],
