@@ -14,7 +14,7 @@
 		"stage-css": "rm dist/*.css && parcel build ./src/index.html --no-minify && s3cmd put ./dist/$(find . -maxdepth 2 -name '*main*.css' -type f -exec basename {} \\; -quit;) s3://celticsdigital/project-name/project-name-stage.min.css --no-mime-magic --acl-public",
 		"publish-js": "rm dist/*.js && npm run build && s3cmd put ./dist/$(find . -maxdepth 2 -name '*main*.js' -type f -exec basename {} \\; -quit;) s3://celticsdigital/project-name/project-name.min.js --no-mime-magic --acl-public",
 		"publish-css": "rm dist/*.css && npm run build && s3cmd put ./dist/$(find . -maxdepth 2 -name '*main*.css' -type f -exec basename {} \\; -quit;) s3://celticsdigital/project-name/project-name.min.css --no-mime-magic --acl-public",
-		"init": "npm run build && git checkout -b dev",
+		"init": "npm run build && git checkout -b dev && npm rebuild node-sass",
 		"master-commit": "TS=`date +%Y-%m-%d__%H:%M:%S`; git add -A && git commit -m 'Publish commit: '$TS && git checkout master && git merge dev && git checkout dev",
 		"assets": "s3cmd put ./assets/exported/* s3://celticsdigital/project-name/assets/ --no-mime-magic --acl-public",
 		"push": "git push && git checkout master && git push && git checkout dev"
