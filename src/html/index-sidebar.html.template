@@ -26,6 +26,10 @@
 <!-- Project JS -->
 <script src="./js/main.js"></script>
 <style>
+    .moscone-flipped-content {
+        float: left;
+    }
+
     .breakpoint-indicator {
         position: fixed;
         top: 5px;
@@ -125,20 +129,45 @@
                 <div class="region region-content">
                     <div id="block-system-main" class="block block-system">
                         <div class="content">
-                            <div class="panel-flexible panels-flexible-37064 clearfix">
-                                <div class="panel-flexible-inside panels-flexible-37064-inside">
-                                    <div class="panels-flexible-region panels-flexible-region-37064-center panels-flexible-region-first panels-flexible-region-last">
-                                        <div class="inside panels-flexible-region-inside panels-flexible-region-37064-center-inside panels-flexible-region-inside-first panels-flexible-region-inside-last">
+                            <div class="panel-display moscone-flipped clearfix ">
+                                <div class="moscone-container moscone-header clearfix panel-panel">
+                                    <div id="moscone-header-inner" class="moscone-container-inner moscone-header-inner panel-panel-inner">
+                                    </div>
+                                </div>
+                                <div class="moscone-flipped-container moscone-flipped-column-content clearfix">
+                                    <div class="moscone-flipped-column-content-region moscone-flipped-content panel-panel">
+                                        <div id="moscone-flipped-content-inner" class="moscone-flipped-column-content-region-inner moscone-flipped-content-inner panel-panel-inner">
                                             <div class="panel-pane pane-entity-field pane-node-body">
                                                 <div class="pane-content">
                                                     <div class="field field-name-body field-type-text-with-summary field-label-hidden">
                                                         <!-- * CONTENT GOES HERE * -->
-                                                        <module href="./html/c_content.html"></module>
+                                                        <module href="./html/main.html"></module>
+                                                        <!-- * END CONTENT * -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel-pane pane-node-links link-wrapper">
+                                                <div class="pane-content">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="moscone-flipped-column-content-region moscone-flipped-sidebar panel-panel">
+                                        <div id="moscone-flipped-sidebar-inner" class="moscone-flipped-column-content-region-inner moscone-flipped-sidebar-inner panel-panel-inner">
+                                            <div class="panel-pane pane-fieldable-panels-pane pane-current-1701 pane-bundle-etowah-text">
+                                                <div class="fieldable-panels-pane">
+                                                    <div class="field field-name-field-etowah-text-body field-type-text field-label-hidden">
+                                                        <!-- * CONTENT GOES HERE * -->
+                                                        <module href="./html/sidebar.html"></module>
                                                         <!-- * END CONTENT * -->
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="moscone-container moscone-footer clearfix panel-panel">
+                                    <div id="moscone-footer-inner" class="moscone-container-inner moscone-footer-inner panel-panel-inner">
                                     </div>
                                 </div>
                             </div>

@@ -28,6 +28,7 @@
 			"func-names": 0,
 			"wrap-iife": 0,
 			"spaced-comment": 0,
+			"no-param-reassign": "off",
 			"space-before-function-paren": "off",
 			"no-var": "off",
 			"no-plusplus": "off",
