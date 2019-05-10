@@ -1,0 +1,174 @@
+/*=============================================
+=            PARTIAL - BREAKPOINTS            =
+==============================================*/
+
+@mixin breakpoint($min: 0, $max: 0) {
+    $type: type-of($min);
+
+    @if $type==string {
+
+        /********  EXTRA SMALL ********/
+        @if $min==xs {
+            @media (max-width: 600px) {
+                @content;
+            }
+        }
+
+        /******** SMALL ********/
+        @if $min==smdown {
+            @media (max-width: 900px) {
+                @content;
+            }
+        }
+
+        @if $min==smonly {
+            @media (min-width: 601px) and (max-width: 900px) {
+                @content;
+            }
+        }
+
+        @else if $min==sm {
+            @media (min-width: 601px) {
+                @content;
+            }
+        }
+
+        /********  MEDIUM ********/
+        @if $min==mddown {
+            @media (max-width: 1200px) {
+                @content;
+            }
+        }
+
+        @if $min==mdonly {
+            @media (min-width: 901px) and (max-width: 1200px) {
+                @content;
+            }
+        }
+
+        @else if $min==md {
+            @media (min-width: 901px) {
+                @content;
+            }
+        }
+
+
+        /********  LARGE ********/
+        @else if $min==lg {
+            @media (min-width: 1201px) {
+                @content;
+            }
+        }
+    }
+
+    @else if $type==number {
+        $query: 'all' !default;
+
+        @if $min !=0 and $max !=0 {
+            $query: '(min-width: #{$min}) and (max-width: #{$max})';
+        }
+
+        @else if $min !=0 and $max==0 {
+            $query: '(min-width: #{$min})';
+        }
+
+        @else if $min==0 and $max !=0 {
+            $query: '(max-width: #{$max})';
+        }
+
+        @media #{$query} {
+            @content;
+        }
+    }
+}
+
+
+/*=================================
+=            BOOTSTRAP            =
+==================================*/
+
+@mixin bootstrap($min) {
+
+    /********  EXTRA SMALL ********/
+    @if $min==xs {
+        @media (max-width: 576px) {
+            @content;
+        }
+    }
+
+    /******** SMALL ********/
+    @if $min==smdown {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+
+    @if $min==smonly {
+        @media (min-width: 576px) and (max-width: 768px) {
+            @content;
+        }
+    }
+
+    @else if $min==sm {
+        @media (min-width: 576px) {
+            @content;
+        }
+    }
+
+    /********  MEDIUM ********/
+    @if $min==mddown {
+        @media (max-width: 992px) {
+            @content;
+        }
+    }
+
+    @if $min==mdonly {
+        @media (min-width: 768px) and (max-width: 992px) {
+            @content;
+        }
+    }
+
+    @else if $min==md {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
+
+    /********  LARGE ********/
+    @if $min==lgdown {
+        @media (max-width: 1200px) {
+            @content;
+        }
+    }
+
+    @if $min==lgonly {
+        @media (min-width: 992px) and (max-width: 1200px) {
+            @content;
+        }
+    }
+
+    @else if $min==lg {
+        @media (min-width: 992px) {
+            @content;
+        }
+    }
+
+    /********  EXTRA LARGE ********/
+    @if $min==lgdown {
+        @media (max-width: 1200px) {
+            @content;
+        }
+    }
+
+    @if $min==lgonly {
+        @media (min-width: 992px) and (max-width: 1200px) {
+            @content;
+        }
+    }
+
+    @else if $min==lg {
+        @media (min-width: 992px) {
+            @content;
+        }
+    }
+}
