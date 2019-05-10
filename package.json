@@ -19,12 +19,23 @@
 		"assets": "s3cmd put ./assets/exported/* s3://celticsdigital/project-path/assets/ --no-mime-magic --acl-public",
 		"push": "git push && git checkout master && git push && git checkout dev"
 	},
-	"eslintIgnore": ["index.js", "dist/**/*.js", "dist/*.js", "node_modules/"],
+	"eslintIgnore": [
+		"index.js",
+		"dist/**/*.js",
+		"dist/*.js",
+		"node_modules/"
+	],
 	"eslintConfig": {
-		"extends": ["airbnb", "prettier"],
+		"extends": [
+			"airbnb",
+			"prettier"
+		],
 		"rules": {
 			"no-console": 0,
-			"quotes": ["error", "backtick"],
+			"quotes": [
+				"error",
+				"backtick"
+			],
 			"func-names": 0,
 			"wrap-iife": 0,
 			"spaced-comment": 0,
@@ -52,7 +63,9 @@
 			"jquery": true
 		},
 		"parser": "babel-eslint",
-		"plugins": ["prettier"]
+		"plugins": [
+			"prettier"
+		]
 	},
 	"babel": {
 		"sourceMap": "inline",
@@ -66,7 +79,9 @@
 				}
 			]
 		],
-		"plugins": ["transform-runtime"],
+		"plugins": [
+			"transform-runtime"
+		],
 		"minified": true
 	},
 	"devDependencies": {
