@@ -23,20 +23,17 @@
 	"eslintConfig": {
 		"extends": ["airbnb", "prettier"],
 		"rules": {
-			"no-console": 0,
-			"quotes": ["error", "backtick"],
+			"eqeqeq": 0,
 			"func-names": 0,
-			"wrap-iife": 0,
-			"spaced-comment": 0,
-			"no-param-reassign": "off",
-			"space-before-function-paren": "off",
-			"no-var": "off",
-			"no-plusplus": "off",
-			"prefer-destructuring": "off",
-			"no-global-assign": "off",
-			"import/extensions": 0,
-			"global-require": "off",
+			"global-require": 0,
 			"ignoreStrings": true,
+			"import/extensions": 0,
+			"no-console": 0,
+			"no-global-assign": 0,
+			"no-param-reassign": 0,
+			"no-plusplus": 0,
+			"no-var": 0,
+			"prefer-destructuring": 0,
 			"prettier/prettier": [
 				"error",
 				{
@@ -44,7 +41,11 @@
 					"singleQuote": true,
 					"printWidth": 200
 				}
-			]
+			],
+			"quotes": ["error", "backtick"],
+			"space-before-function-paren": 0,
+			"spaced-comment": 0,
+			"wrap-iife": 0
 		},
 		"env": {
 			"browser": true,
