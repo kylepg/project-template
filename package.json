@@ -7,21 +7,15 @@
 	"scripts": {
 		"sync": "browser-sync start --proxy 'localhost:1234' -w",
 		"watch": "parcel ./src/index.html --out-dir dist/dev/ & npm run watch-html",
-		"watch-html":
-			"nodemon --watch ./src/html/*.html -x \"touch ./src/index.html\"",
+		"watch-html": "nodemon --watch ./src/html/*.html -x \"touch ./src/index.html\"",
 		"build": "parcel build  ./src/index.html --no-source-maps",
 		"stage": "npm run stage-js && npm run stage-css",
-		"stage-js":
-			"rm -f dist/*.js && npm run build && duck --username nbcelticsa --password project-pw --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name/project-name-stage.js project-path/project-name/dist/*.js --existing overwrite -y && TS=`date +%Y%m%d-%H:%M:%S`; cp project-path/project-name/dist/*.js ./log/stage_$TS.js",
-		"stage-css":
-			"rm dist/*.css && npm run build && duck --username nbcelticsa --password project-pw --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name/project-name-stage.css project-path/project-name/dist/*.css --existing overwrite -y && TS=`date +%Y%m%d-%H:%M:%S`; cp project-path/project-name/dist/*.css ./log/stage_$TS.css",
+		"stage-js": "rm -f dist/*.js && npm run build && duck --username nbcelticsa --password project-pw --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name/project-name-stage.js project-path/project-name/dist/*.js --existing overwrite -y && TS=`date +%Y%m%d-%H:%M:%S`; cp project-path/project-name/dist/*.js ./log/stage_$TS.js",
+		"stage-css": "rm dist/*.css && npm run build && duck --username nbcelticsa --password project-pw --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name/project-name-stage.css project-path/project-name/dist/*.css --existing overwrite -y && TS=`date +%Y%m%d-%H:%M:%S`; cp project-path/project-name/dist/*.css ./log/stage_$TS.css",
 		"publish": "npm run publish-js && npm run publish-css",
-		"publish-js":
-			"rm dist/*.js && npm run build && duck --username nbcelticsa --password project-pw --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name/project-name.min.js project-path/project-name/dist/*.js --existing overwrite -y && TS=`date +%Y%m%d-%H:%M:%S`; cp project-path/project-name/dist/*.js ./log/publish_$TS.js",
-		"publish-css":
-			"rm dist/*.css && npm run build && duck --username nbcelticsa --password project-pw --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name/project-name.min.css project-path/project-name/dist/*.css --existing overwrite -y && TS=`date +%Y%m%d-%H:%M:%S`; cp project-path/project-name/dist/*.css ./log/publish_$TS.css",
-		"init":
-			"mkdir project-name && duck --username nbcelticsa --password project-pw --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name project-path/project-name/project-name -y && rm -rf project-path/project-name/project-name && npm run build"
+		"publish-js": "rm dist/*.js && npm run build && duck --username nbcelticsa --password project-pw --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name/project-name.min.js project-path/project-name/dist/*.js --existing overwrite -y && TS=`date +%Y%m%d-%H:%M:%S`; cp project-path/project-name/dist/*.js ./log/publish_$TS.js",
+		"publish-css": "rm dist/*.css && npm run build && duck --username nbcelticsa --password project-pw --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name/project-name.min.css project-path/project-name/dist/*.css --existing overwrite -y && TS=`date +%Y%m%d-%H:%M:%S`; cp project-path/project-name/dist/*.css ./log/publish_$TS.css",
+		"init": "mkdir project-name && duck --username nbcelticsa --password project-pw --upload ftp://nbcelticsa@cdnftp.turner.com/projects/project-name project-path/project-name/project-name -y && rm -rf project-path/project-name/project-name && npm run build"
 	},
 	"eslintIgnore": ["index.js", "dist/**/*.js", "dist/*.js", "node_modules/"],
 	"eslintConfig": {
