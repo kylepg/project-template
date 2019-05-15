@@ -8,7 +8,7 @@
 		"sync": "browser-sync start --proxy 'localhost:1234' -w",
 		"watch": "parcel ./src/index.html --out-dir dist/dev/ --port 3434 & onchange 'src/html/*' 'src/html' -- touch ./src/index.html",
 		"build": "parcel build  ./src/index.html --no-source-maps",
-		"stage": "npm run stage-js && npm run stage-css",
+		"stage": "npm run stage-js &&& npm run stage-css",
 		"publish": "npm run publish-js && npm run publish-css && npm run master-commit",
 		"stage-js": "rm -f dist/*.js && parcel build ./src/index.html --no-minify && s3cmd put ./dist/$(find . -maxdepth 2 -name '*main*.js' -type f -exec basename {} \\; -quit;) s3://celticsdigital/<project-path>project-name-stage.min.js --no-mime-magic --acl-public",
 		"stage-css": "rm dist/*.css && parcel build ./src/index.html --no-minify && s3cmd put ./dist/$(find . -maxdepth 2 -name '*main*.css' -type f -exec basename {} \\; -quit;) s3://celticsdigital/<project-path>project-name-stage.min.css --no-mime-magic --acl-public",
