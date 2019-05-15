@@ -9,3 +9,4 @@ dist/dev/*
 .vscode
 Icon
 package-lock.json
+.extra
