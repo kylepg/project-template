@@ -16,7 +16,7 @@
 <!-- JS SITEWIDE OVERRIDES -->
 <script type="text/javascript" src="https://www.nba.com/celtics/sites/celtics/files/sitewide_overrides/active/etowah_swo_98743/header_sitewide_overrides.js?pelmf9"></script>
 <!-- CSS SITEWIDE OVERRIDES -->
-<link type="text/css" rel="stylesheet" href="https://www.nba.com/celtics/sites/celtics/files/sitewide_overrides/active/etowah_swo_98107/style_sitewide_overrides.css?pbz7wj" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.nba.com/resources/static/team/v2/celtics/dev/overrides/overrides.css" media="all" />
 <!-- BOOTSTRAP 3 -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <!-- TYPEKIT FONTS -->
