@@ -17,7 +17,9 @@
 		"init": "npm run build && git checkout -b dev && npm rebuild node-sass",
 		"master-commit": "TS=`date +%Y-%m-%d__%H:%M:%S`; git add -A && git commit -m 'Publish commit: '$TS && git checkout master && git merge dev && git checkout dev",
 		"assets": "s3cmd put ./assets/exported/* s3://celticsdigital/<project-path>/assets/ --no-mime-magic --acl-public",
-		"push": "git push && git checkout master && git push && git checkout dev"
+		"push": "git push && git checkout master && git push && git checkout dev",
+		"config": "s3cmd put ./dist/dev/data/config.json s3://celticsdigital/<project-path>config.json --no-mime-magic --acl-public",
+		"stage-config": "s3cmd put ./dist/dev/data/config.json s3://celticsdigital/<project-path>config.json --no-mime-magic --acl-public"
 	},
 	"eslintIgnore": ["index.js", "dist/**/*.js", "dist/*.js", "node_modules/"],
 	"eslintConfig": {
