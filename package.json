@@ -1,7 +1,7 @@
 {
   "name": "project-name",
-  "version": "1.0.0",
-  "description": "celtics.com",
+  "version": "2.0.0",
+  "description": "Project",
   "author": "Kyle George",
   "license": "MIT",
   "scripts": {
@@ -22,9 +22,10 @@
     "master-commit": "TS=`date +%Y-%m-%d__%H:%M:%S`; git add -A && git commit -m 'Publish commit: '$TS && git checkout master && git merge dev && git checkout dev",
     "assets": "s3cmd put ./assets/exported/* s3://celticsdigital/<project-path>/assets/ --no-mime-magic --acl-public",
     "push": "git push && git checkout master && git push && git checkout dev",
-    "config": "s3cmd put ./dist/dev/data/config.json s3://celticsdigital/<project-path>config.json --no-mime-magic --acl-public",
-    "stage-config": "s3cmd put ./dist/dev/data/config.json s3://celticsdigital/<project-path>config.json --no-mime-magic --acl-public"
+    "config": "s3cmd put ./dist/dev/data/config.json s3://celticsdigital/<project-path>/config.json --no-mime-magic --acl-public",
+    "stage-config": "s3cmd put ./dist/dev/data/config.json s3://celticsdigital/<project-path>/config.json --no-mime-magic --acl-public"
   },
+  "assetsPath": "src/data",
   "eslintIgnore": ["index.js", "dist/**/*.js", "dist/*.js", "node_modules/"],
   "eslintConfig": {
     "extends": ["airbnb"],
@@ -86,6 +87,7 @@
     "node-sass": "^4.9.2",
     "nodemon": "^1.18.9",
     "onchange": "^5.2.0",
+    "parcel-plugin-asset-copier": "^1.0.0",
     "posthtml": "^0.11.3",
     "posthtml-alt-always": "^1.0.1",
     "posthtml-custom-elements": "^1.1.2",
