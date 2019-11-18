@@ -27,40 +27,8 @@
 <!-- Project JS -->
 <script src="./js/main.js"></script>
 <style>
-    .breakpoint-indicator {
-        position: fixed;
-        top: 5px;
-        font-size: 20px;
-        font-weight: 500;
-        z-index: 200000;
-        right: 200px;
-        color: rgb(47, 157, 230);
-        display: none;
-    }
-
-    @media (max-width: 600px) {
-        .breakpoint-indicator.xs {
-            display: block !important;
-            top: -225px;
-        }
-    }
-
-    @media (min-width: 601px) and (max-width: 900px) {
-        .breakpoint-indicator.sm {
-            display: block !important;
-        }
-    }
-
-    @media (min-width: 901px) and (max-width: 1200px) {
-        .breakpoint-indicator.md {
-            display: block !important;
-        }
-    }
-
-    @media (min-width: 1201px) {
-        .breakpoint-indicator.lg {
-            display: block !important;
-        }
+    .moscone-flipped-content {
+        float: left;
     }
 
     h1 {
