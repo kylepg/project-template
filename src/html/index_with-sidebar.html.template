@@ -88,7 +88,7 @@
                 <div id="page-header"></div>
                 <div class="region region-content">
                     <div id="block-system-main" class="block block-system">
-                        <div class="content">
+                        <div class="content" style="margin-top:-20px">
                             <div class="panel-display moscone-flipped clearfix ">
                                 <div class="moscone-container moscone-header clearfix panel-panel">
                                     <div id="moscone-header-inner" class="moscone-container-inner moscone-header-inner panel-panel-inner">
