@@ -19,7 +19,8 @@
     "assets": "s3cmd put ./assets/exported/* s3://celticsdigital/<project-path>/assets/ --no-mime-magic --acl-public",
     "push": "git push && git checkout master && git push && git checkout dev",
     "config": "s3cmd put ./dist/dev/data/config.json s3://celticsdigital/<project-path>/config.json --no-mime-magic --acl-public",
-    "stage-config": "s3cmd put ./dist/dev/data/config.json s3://celticsdigital/<project-path>/config.json --no-mime-magic --acl-public"
+    "stage-config": "s3cmd put ./dist/dev/data/config.json s3://celticsdigital/<project-path>/config.json --no-mime-magic --acl-public",
+    "data": "s3cmd put ./src/data/* s3://celticsdigital/<project-path>/data/ --no-mime-magic --acl-public"
   },
   "assetsPath": "src/data",
   "eslintIgnore": [
