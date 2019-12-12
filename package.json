@@ -26,7 +26,7 @@
     "publish": "npm run parcel_build && npm run publish_css_js --assetType='css' --cdn='do' && npm run publish_css_js --assetType='do' --cdn='nba' && npm run master-commit",
     "publish_nba": "npm run publish_css_js --assetType='css' --cdn='nba' && npm run publish_css_js --assetType='js' --cdn='nba'",
     "publish_do": "npm run publish_css_js --assetType='do' --cdn='nba' && npm run publish_css_js --assetType='js' --cdn='do'",
-    "publish_css_js": "s3cmd -c $npm_package_config_s3cmd_$($npm_config_cdn) put ./dist/$(find . -maxdepth 2 -name '*main*.$($npm_config_assetType)' -type f -exec basename {} \\; -quit;) $npm_package_config_cdn_$($npm_config_cdn)/project-name$($npm_config_appendage).min.$($npm_config_assetType) --no-mime-magic --acl-public",
+    "publish_css_js": "s3cmd -c $npm_package_config_s3cmd_$($npm_config_cdn) put ./dist/$(find . -maxdepth 2 -name '*main*.$($npm_config_assetType)' -type f -exec basename {} \\; -quit;) $npm_package_config_cdn_$($npm_config_cdn)/$($npm_package_config_projectName)$($npm_config_appendage).min.$($npm_config_assetType) --no-mime-magic --acl-public",
     "publish_assets": "s3cmd -c $npm_package_config_s3cmd_$($npm_config_cdn) put ./assets/exported/* $npm_package_config_cdn_$($npm_config_cdn)/assets/ --no-mime-magic --acl-public",
     "publish_config": "s3cmd -c $npm_package_config_s3cmd_$($npm_config_cdn) put ./dist/dev/data/config.json $npm_package_config_cdn_$($npm_config_cdn)/config/config.json --no-mime-magic --acl-public",
     "publish_data": "s3cmd -c $npm_package_config_s3cmd_$($npm_config_cdn) put ./src/data/* $npm_package_config_cdn_$($npm_config_cdn)/data/ --no-mime-magic --acl-public",
