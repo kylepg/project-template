@@ -6,15 +6,15 @@
   "license": "MIT",
   "config": {
     "cdn": {
-      "do": "s3://celticsdigital/testing/scripts",
-      "nba": "s3://nba-static-celtics-prod"
+      "do": "s3://celticsdigital/<project-path>",
+      "nba": "s3://nba-static-celtics-prod/<project-path>"
     },
     "s3cmd": {
       "do": "/Users/kyle/.s3cfg_do",
       "nba": "/Users/kyle/.s3cfg_nba"
     },
-    "name": "scripts",
-    "path": "test/kyle"
+    "name": "project-name",
+    "path": "<project-path>"
   },
   "scripts": {
     "init": "npm run build && git checkout -b dev && npm rebuild node-sass",
