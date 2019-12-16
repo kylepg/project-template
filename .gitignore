@@ -2,7 +2,7 @@ node_modules/
 .sass-cache/
 .cache
 *.css.map
-assets/
+./assets/
 reference/
 design/
 dist/dev/*
