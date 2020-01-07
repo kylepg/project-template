@@ -23,7 +23,7 @@
     "build": "rm -f dist/*.js && rm -f dist/*.css && rm -f dist/*.css && rm -f dist/*.css && parcel build  ./src/index.html --no-source-maps",
     "git_push": "git push && git checkout master && git push && git checkout dev",
     "git_master-commit": "TS=`date +%Y-%m-%d__%H:%M:%S`; git add -A && git commit -m 'Publish commit: '$TS && git checkout master && git merge dev && git checkout dev",
-    "stage": "npm run publish --append='stage'",
+    "stage": "npm run publish --append='_stage'",
     "publish": "npm run build && npm run publish_nba && npm run publish_do && npm run git_master-commit",
     "publish_js": "npm run publish_nba_js && npm run publish_do_js",
     "publish_css": "npm run publish_nba_css && npm run publish_do_css",
