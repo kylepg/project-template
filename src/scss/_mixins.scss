@@ -1,0 +1,16 @@
+@mixin aspect-ratio($padding) {
+    &::before {
+        content: "";
+        width: 1px;
+        margin-left: -1px;
+        float: left;
+        height: 0;
+        padding-top: $padding;
+    }
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
