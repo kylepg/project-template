@@ -14,7 +14,8 @@
       "nba": "/Users/kyle/.s3cfg_nba"
     },
     "name": "project-name",
-    "path": "<project-path>"
+    "path": "<project-path>",
+    "version": "1.0"
   },
   "scripts": {
     "init": "npm run build && git checkout -b dev && npm rebuild node-sass",
