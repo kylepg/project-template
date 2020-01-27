@@ -22,6 +22,7 @@
     "sync": "browser-sync start --proxy 'localhost:1234' -w",
     "watch": "parcel ./src/index.html --out-dir dist/dev/ --port 3434 & onchange 'src/html/*' 'src/html' -- touch ./src/index.html",
     "build": "rm -f dist/*.js && rm -f dist/*.css && rm -f dist/*.css && rm -f dist/*.css && parcel build  ./src/index.html --no-source-maps",
+    "build-main": "parcel build  ./src/html/main.html --no-source-maps",
     "git_push": "git push && git checkout master && git push && git checkout dev",
     "git_master-commit": "TS=`date +%Y-%m-%d__%H:%M:%S`; git add -A && git commit -m 'Publish commit: '$TS && git checkout master && git merge dev && git checkout dev",
     "stage": "npm run publish --append='_stage'",
