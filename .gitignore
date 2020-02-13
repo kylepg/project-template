@@ -1,4 +1,5 @@
 node_modules/
+local/
 .sass-cache/
 .cache
 *.css.map
