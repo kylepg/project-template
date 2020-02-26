@@ -15,7 +15,7 @@
   }
 }
 
-@include video() {
+@mixin video() {
   .video-wrap {
     background: #000;
     width: 100%;
