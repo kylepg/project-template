@@ -1,278 +1,277 @@
-/*==================================
-=            Full Width            =
-===================================*/
+/* ---------------------------- FULL WIDTH LAYOUT --------------------------- */
+
 #content {
-    width: 100% !important;
-    max-width: 100% !important;
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
 #content .content .panel-display {
-    padding: 0;
+  padding: 0;
 }
 
 #content .content .panel-flexible {
-    width: 100% !important;
+  width: 100% !important;
 }
 
-#content .content .panel-flexible .panel-flexible-inside .panels-flexible-region {
-    width: 100% !important;
+#content
+  .content
+  .panel-flexible
+  .panel-flexible-inside
+  .panels-flexible-region {
+  width: 100% !important;
 }
 
 .page-header-ad {
-    display: none;
+  display: none;
 }
 
 .content-block .content-block-inner {
-    max-width: 900px !important;
+  max-width: 900px !important;
 
-    img {
-        border-radius: 3px;
-    }
+  img {
+    border-radius: 3px;
+  }
 
-    .callout .callout-content {
-        padding: 0 10px 0px 0px;
-    }
-
+  .callout .callout-content {
+    padding: 0 10px 0px 0px;
+  }
 }
 
 a {
-    color: #008348;
+  color: #008348;
 }
 
 .interest-button {
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
-
-
 
 /*! CSS Used from: https://www.nba.com/celtics/sites/all/themes/etowah_radix/assets/stylesheets/bootstrap.css?pbz7wj ; media=all */
 @media all {
-    img {
-        border: 0;
-    }
+  img {
+    border: 0;
+  }
 
-    @media print {
-        * {
-            text-shadow: none !important;
-            color: #000 !important;
-            background: transparent !important;
-            box-shadow: none !important;
-        }
-
-        img {
-            page-break-inside: avoid;
-        }
-
-        img {
-            max-width: 100% !important;
-        }
-    }
-
+  @media print {
     * {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-
-    *:before,
-    *:after {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
+      text-shadow: none !important;
+      color: #000 !important;
+      background: transparent !important;
+      box-shadow: none !important;
     }
 
     img {
-        vertical-align: middle;
+      page-break-inside: avoid;
     }
+
+    img {
+      max-width: 100% !important;
+    }
+  }
+
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  img {
+    vertical-align: middle;
+  }
 }
 
 /*! CSS Used from: https://www.nba.com/celtics/sites/all/themes/etowah_radix/assets/stylesheets/screen.css?pbz7wj ; media=all */
 @media all {
-    *:focus {
-        outline: 0;
-    }
+  *:focus {
+    outline: 0;
+  }
 }
 
 /*! CSS Used from: https://www.nba.com/celtics/sites/celtics/files/css/css_T-TZfTydUwB664EEKJHDcuk7jy4tISCzGTq3m7vhy9Q.css ; media=all */
 @media all {
-    img {
-        border: 0;
-    }
+  img {
+    border: 0;
+  }
 }
 
 /*! CSS Used from: https://www.nba.com/celtics/sites/all/themes/etowah_radix/assets/stylesheets/screen.css?pbz7wj ; media=all */
 @media all {
-    *:focus {
-        outline: 0;
-    }
+  *:focus {
+    outline: 0;
+  }
 }
 
 /*! CSS Used from: https://www.nba.com/resources/static/team/v2/celtics/dev/overrides/overrides.css ; media=all */
 @media all {
-    .xs-ht-500 {
-        height: 500px;
-    }
+  .xs-ht-500 {
+    height: 500px;
+  }
 
-    .hero-inner-wrap.tix .hero-inner {
-        padding: 0 50px;
-        height: 100%;
-        overflow: auto;
-    }
+  .hero-inner-wrap.tix .hero-inner {
+    padding: 0 50px;
+    height: 100%;
+    overflow: auto;
+  }
 
-    @media (max-width: 600px) {
-        .hero-inner-wrap .hero-inner {
-            padding: 5px 10px;
-        }
+  @media (max-width: 600px) {
+    .hero-inner-wrap .hero-inner {
+      padding: 5px 10px;
     }
+  }
 
-    .hero {
-        position: relative;
-        display: flex;
-        width: 100%;
-        height: 1px;
-        min-height: 500px;
-        overflow: hidden;
-        align-items: center;
-        justify-content: flex-start;
-        background-color: #000;
-    }
+  .hero {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 1px;
+    min-height: 500px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #000;
+  }
 
-    .hero.center {
-        justify-content: center;
-    }
+  .hero.center {
+    justify-content: center;
+  }
 
-    .hero .hero-bg {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        z-index: 10;
-        background-position: 50%;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+  .hero .hero-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
-    .hero .hero-inner-wrap {
-        width: 100%;
-        max-width: 1200px;
-        height: auto;
-        z-index: 20;
-        margin: 0 auto;
-    }
+  .hero .hero-inner-wrap {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    z-index: 20;
+    margin: 0 auto;
+  }
 
-    .hero .hero-inner-wrap .hero-inner {
-        position: relative;
-        padding: 50px;
-        color: #fff;
-        overflow: auto;
-    }
+  .hero .hero-inner-wrap .hero-inner {
+    position: relative;
+    padding: 50px;
+    color: #fff;
+    overflow: auto;
+  }
 
-    ::-moz-selection {
-        background: #00b664;
-        color: #fff;
-    }
+  ::-moz-selection {
+    background: #00b664;
+    color: #fff;
+  }
 
-    ::selection {
-        background: #00b664;
-        color: #fff;
-    }
+  ::selection {
+    background: #00b664;
+    color: #fff;
+  }
 }
 
 /*! CSS Used from: https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css */
 img {
-    border: 0;
+  border: 0;
 }
 
 @media print {
+  *,
+  :after,
+  :before {
+    color: #000 !important;
+    text-shadow: none !important;
+    background: 0 0 !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+  }
 
-    *,
-    :after,
-    :before {
-        color: #000 !important;
-        text-shadow: none !important;
-        background: 0 0 !important;
-        -webkit-box-shadow: none !important;
-        box-shadow: none !important;
-    }
+  img {
+    page-break-inside: avoid;
+  }
 
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
+  img {
+    max-width: 100% !important;
+  }
 }
 
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :after,
 :before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 img {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 /*! CSS Used from: http://localhost:65354/main.bdb8859a.css */
 @media (max-width: 1200px) {
-    .hero[data-page="holidaySuites"] {
-        min-height: 300px;
-    }
+  .hero[data-page="holidaySuites"] {
+    min-height: 300px;
+  }
 }
 
 @media (max-width: 600px) {
-    .hero[data-page="holidaySuites"] {
-        min-height: 170px;
-    }
+  .hero[data-page="holidaySuites"] {
+    min-height: 170px;
+  }
 }
 
 .hero[data-page="holidaySuites"] .hero-bg {
-    max-width: 1500px;
-    top: auto;
-    left: auto;
+  max-width: 1500px;
+  top: auto;
+  left: auto;
 }
 
 @media (max-width: 600px) {
-    .hero {
-        min-height: 300px;
-    }
+  .hero {
+    min-height: 300px;
+  }
 }
 
 .hero img {
-    opacity: 1;
-    transition: opacity 0.5s;
+  opacity: 1;
+  transition: opacity 0.5s;
 }
 
 .hero .hero-inner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-bg {
-    overflow: hidden;
-    position: relative;
+  overflow: hidden;
+  position: relative;
 }
 
 .hero-bg img {
-    position: absolute;
-    left: -10000%;
-    right: -10000%;
-    top: -10000%;
-    bottom: -10000%;
-    margin: auto auto;
-    min-width: 1000%;
-    min-height: 1000%;
-    -webkit-transform: scale(0.1);
-    transform: scale(0.1);
+  position: absolute;
+  left: -10000%;
+  right: -10000%;
+  top: -10000%;
+  bottom: -10000%;
+  margin: auto auto;
+  min-width: 1000%;
+  min-height: 1000%;
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
 }
