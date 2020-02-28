@@ -1,11 +1,14 @@
-@mixin aspect-ratio($padding) {
+/* ------------------------------ ASPECT RATIO ------------------------------ */
+// 16:9 - 56.25%
+//
+@mixin aspect-ratio($ratio: 1 1) {
   &::before {
     content: "";
     width: 1px;
     margin-left: -1px;
     float: left;
     height: 0;
-    padding-top: $padding;
+    padding-top: percentage(nth($ratio, 2) / nth($ratio, 1));
   }
 
   &:after {
@@ -15,14 +18,23 @@
   }
 }
 
-@mixin video() {
-  .video-wrap {
-    background: #000;
-    width: 100%;
-    height: auto;
-    border-radius: 3px;
-    box-shadow: 0 7px 13px -5px rgba(0, 0, 0, 0.4);
-  }
+/* ---------------------------------- VIDEO --------------------------------- */
+/*
+<div class="video">
+    <script class="_nbaVideoPlayerScout" 
+            data-team="celtics" 
+            data-videoId="/video/teams/celtics/2018/10/10/2288457/1539179070084-COM20_CoachJrCeltics_2kWS_H264-2288457"
+            data-width="768" data-height="732" src="https://www.nba.com/scout/team/cvp/videoPlayerScout.js">
+    </script>
+</div>
+*/
+
+@mixin nba-video() {
+  background: #000;
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+  box-shadow: 0 7px 13px -5px rgba(0, 0, 0, 0.4);
   .nba-svp {
     max-width: 100% !important;
   }
@@ -37,10 +49,4 @@
     background-color: #212121;
     border-radius: 5px;
   }
-  /*
-        <div class="video-wrap halign-center">
-            <script class="_nbaVideoPlayerScout" data-team="celtics" data-videoId="/video/teams/celtics/2018/10/10/2288457/1539179070084-COM20_CoachJrCeltics_2kWS_H264-2288457"
-                data-width="768" data-height="732" src="https://www.nba.com/scout/team/cvp/videoPlayerScout.js"></script>
-        </div>
-    */
 }
