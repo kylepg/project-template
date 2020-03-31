@@ -1,6 +1,6 @@
 {
   "name": "project-name",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Project",
   "author": "Kyle George",
   "license": "MIT",
@@ -16,6 +16,9 @@
     "name": "project-name",
     "path": "<project-path>",
     "version": "1.0"
+  },
+  "alias": {
+    "vue": "./node_modules/vue/dist/vue.common.js"
   },
   "scripts": {
     "init": "npm run build && git checkout -b dev && npm rebuild node-sass",
@@ -62,6 +65,9 @@
     "extends": [
       "airbnb"
     ],
+    "plugins": [
+      "vue"
+    ],
     "rules": {
       "eqeqeq": 0,
       "func-names": 0,
@@ -73,6 +79,18 @@
       "no-param-reassign": 0,
       "no-plusplus": 0,
       "no-var": 0,
+      "vue/html-self-closing": 0,
+      "vue/require-default-prop": 0,
+      "vue/max-attributes-per-line": [
+        "error",
+        {
+          "singleline": 3,
+          "multiline": {
+            "max": 3,
+            "allowFirstLine": true
+          }
+        }
+      ],
       "prefer-destructuring": 0,
       "quotes": [
         "error",
@@ -107,6 +125,7 @@
     "minified": true
   },
   "devDependencies": {
+    "@vue/component-compiler-utils": "^3.1.1",
     "autoprefixer": "^9.7.3",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.6",
@@ -137,10 +156,14 @@
     "posthtml-w3c": "^0.8.2",
     "prettier": "^1.18.2",
     "prettier-eslint": "^9.0.0",
-    "uglifyify": "^4.0.5"
+    "uglifyify": "^4.0.5",
+    "eslint-plugin-vue": "^6.2.2",
+    "vue-eslint-parser": "^7.0.0",
+    "vue-hot-reload-api": "^2.3.4"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
-    "babel-runtime": "^6.26.0"
+    "babel-runtime": "^6.26.0",
+    "vue": "^2.6.11"
   }
 }
