@@ -70,6 +70,7 @@
       "vue"
     ],
     "rules": {
+      "no-new": 0,
       "eqeqeq": 0,
       "func-names": 0,
       "global-require": 0,
