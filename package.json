@@ -14,7 +14,7 @@
   },
   "scripts": {
     "init": "npm run build && git branch -m production && git checkout -b dev && npm rebuild node-sass",
-    "sync": "browser-sync start --proxy 'localhost:1234' -w",
+    "sync": "browser-sync start --proxy 'localhost:3434' -w",
     "watch": "parcel ./src/index.html --out-dir dist/dev/ --port 3434 & onchange 'src/html/*' 'src/html' -- touch ./src/index.html",
     "build": "rm -f dist/*.js && rm -f dist/*.css && rm -f dist/*.css && rm -f dist/*.css && parcel build  ./src/index.html --no-source-maps",
     "build-main": "parcel build  ./src/html/main.html --no-source-maps",
@@ -138,7 +138,8 @@
     "posthtml-w3c": "^0.8.2",
     "prettier": "^1.18.2",
     "prettier-eslint": "^9.0.2",
-    "uglifyify": "^4.0.5"
+    "uglifyify": "^4.0.5",
+    "browser-sync": "^2.26.13"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
